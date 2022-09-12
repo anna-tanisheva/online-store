@@ -1,0 +1,53 @@
+.filters-wrapper {
+  display: flex;
+  flex-basis: 47%;
+  outline: 2px solid $color-dark-l;
+  border-radius: 20px;
+  margin: 0 40px 50px;
+  padding: 20px 10px;
+  justify-content: space-between;
+
+  @media (min-width: 768px) and (max-width: 1272px) {
+    margin: 0 20px 20px;
+  }
+
+  @media (min-width: 768px) and (max-width: 1158px) {
+    flex-basis: 100%;
+    margin: 0 0 20px 0;
+  }
+}
+
+.filter {
+  display: flex;
+  flex-basis: 18%;
+  margin: 0 5px;
+  flex-direction: column;
+  border: 1px solid $color-dark-s;
+  justify-content: space-evenly;
+  padding: 5px;
+  background-color: darken($color-light-s, 3%);
+  border-radius: 3px;
+}
+
+.popular.filter {
+  flex-grow: 1;
+  min-width: 125px;
+}
+
+.filter-label {
+  padding: 0 0 0 20px;
+  background-image: url("../../../assets/images/unchecked.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.filter-field {
+  display: none;
+}
+
+:checked + .filter-label {
+  background-image: url("../../../assets/images/checked.png");
+  font-weight: 700;
+  color: $color-active;
+}

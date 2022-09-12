@@ -1,0 +1,46 @@
+html,
+body,
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $font-primary;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  background-color: $color-light-s;
+  @media (min-width: 768px) and (max-width: 1695px) {
+    padding-top: 170px;
+  }
+}
+
+.button {
+  border: none;
+  outline: none;
+  padding: 5px 5px;
+  background-color: $color-primary-light;
+  border-radius: 3px;
+  border: 2px solid $color-primary;
+  box-shadow: 2px 1px 4px $color-dark-xl;
+  cursor: pointer;
+  transition: 0.3s;
+  text-transform: capitalize;
+}
+
+.button:hover {
+  background-color: lighten($color-primary-light, 2%);
+}
+
+.container {
+  display: flex;
+  max-width: 1440px;
+  padding: 0 20px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.hidden {
+  display: none;
+}

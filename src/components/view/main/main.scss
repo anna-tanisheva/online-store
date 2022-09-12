@@ -1,0 +1,9 @@
+.main {
+  min-height: calc(100vh - 240px);
+}
+
+.main .container {
+  flex-wrap: wrap;
+  justify-content: space-around;
+  position: relative;
+}

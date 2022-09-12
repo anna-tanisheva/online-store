@@ -1,0 +1,96 @@
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  min-width: 100%;
+  margin-bottom: 30px;
+}
+
+.card {
+  flex-basis: 348px;
+  margin: 20px;
+  border: 1px solid grey;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  cursor: pointer;
+}
+
+.card-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  flex-basis: 100%;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  padding: 10px;
+
+  & > * {
+    width: 100%;
+  }
+
+  .buttons-wrapper {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 20px;
+  }
+
+  .item-img {
+    width: auto;
+    height: 229px;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+.card-body {
+  background: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  box-sizing: border-box;
+  bottom: 0;
+  position: absolute;
+  height: 30px;
+  transition: 1s;
+  color: $color-light-s;
+}
+
+.card-body::before {
+  content: " See more...";
+  display: flex;
+  align-items: center;
+  position: absolute;
+  width: 30%;
+  height: 30px;
+  padding: 0 0 0 8px;
+  transition: 1s;
+  border-radius: 0 0 15px 0;
+  background-color: $color-active;
+}
+
+.card:hover .card-body {
+  height: 75%;
+}
+
+.card-content {
+  padding: 2rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+
+  p {
+    margin-bottom: 5px;
+  }
+}
+
+.card:hover .card-body::before {
+  width: 80%;
+}
+
+.in-cart {
+  outline: 3px solid $color-active;
+}
+
+.item-name {
+  margin-bottom: 20px;
+  transform: scale(103%);
+}

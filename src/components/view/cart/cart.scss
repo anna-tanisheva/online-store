@@ -1,0 +1,40 @@
+.cart {
+  position: fixed;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  width: 80px;
+  height: 80px;
+  top: 20px;
+  right: 50px;
+  background-color: transparent;
+  background-image: url("../../../assets/images/android-chrome-192x192.png");
+  background-size: contain;
+  color: $color-dark-3xl;
+  transition: 0.5s;
+
+  @media (min-width: 768px) and (max-width: 1695px) {
+    z-index: 11;
+  }
+}
+
+.cart-counter {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(247, 84, 84, 0.9);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  bottom: 5px;
+  left: 10px;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.cart-inner {
+  font-weight: 700;
+  flex-basis: 80%;
+  text-align: center;
+}
